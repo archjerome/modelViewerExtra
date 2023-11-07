@@ -1,0 +1,290 @@
+body {
+    overflow:hidden;
+    margin: 0px;
+}
+.vdivider
+{
+   float:right;
+   width:4px;
+   cursor: col-resize;
+   background:rgba(255,255,255,0.1);
+   border-right: rgb(200,200,200) 1px solid;
+}
+.vdivider:hover
+{
+   background:#E5F3FB;
+}
+::-webkit-scrollbar{height: 6px;width: 6px;}
+::-webkit-scrollbar-track {
+  background-color: rgb(250,250,250);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(200, 200, 200);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3399FF;
+}
+.panel
+{
+  position:absolute;
+  left:-400px;
+   top:0px;
+   font-family: "Segoe UI",Arial, sans;
+  font-size: 12.73px;
+  background:rgb(255,255,255);
+  box-shadow: 8px 0px 20px 2px rgba(0,0,0,0.04);
+  opacity:0.7;
+}
+.panel:hover{
+    opacity:0.9;
+}
+.main{
+ font-family: "Segoe UI",Arial, sans;
+   font-size:20px;
+   margin-top:20px;
+   margin-left:20px;
+   opacity:0.5;
+   line-height:100%;
+   cursor:pointer;
+}
+.panel h1{
+   padding:0px;
+   margin:0px;
+   padding-right:20px;
+   font-family: "Segoe UI Light","Segoe UI",Arial, sans;
+   text-align:right;
+   font-size:12px;
+   color:#444;
+}
+.panel hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.animatable{
+   transition: all 0.2s ease;
+}
+.panel .content
+{
+ position:absolute;
+ overflow-y:auto;
+ overflow-x:hidden;
+ bottom:27px;
+}
+.main img{
+ position:absolute;
+ padding-top:4px;
+ display:inline-block;
+}
+.main .text, .main .search{
+ position:absolute;
+ display:inline-block;
+ width:200px;
+}
+input:focus {
+    outline: none !important;
+}
+.main .search{
+ font-size: 12.73px
+}
+.main:hover{
+   opacity:1.0;
+}
+.panel ul
+{
+list-style: none;
+padding: 0;
+margin: 0 3em 0 0;
+}
+.panel li
+{
+   opacity:0.8;
+   width:210px;
+   padding:3px 0px 3px 20px;
+   cursor:pointer;
+}
+.panel li:hover
+{
+   background-color:#E5F3FB;
+   opacity:1.0;
+}
+.playButton{
+ font-family: 'Segoe UI SemiBold','Segoe UI', Arial, sans-serif;
+ color: white;
+ text-decoration: none;
+ text-align: center;
+ padding: 5px 15px 5px 15px;
+ font-size:13.64px;
+ background: #00AEEE;
+ color: #FFF;
+ border: 0px none;
+ outline: 0px none;
+ cursor: pointer;
+ right:10px;margin-top:10px;position:absolute;
+}
+.playButton:hover {background: #0090C6;text-decoration: none;color: white;}
+.buttons
+{
+ float:left;
+ bottom:6px;
+ left:5px;
+ position:absolute;
+}
+.buttons .passive, .buttons .active
+{
+ cursor:pointer;
+ padding:2px 4px 2px 4px;
+}
+.buttons .active
+{
+ border-bottom: 2px solid #000;
+}
+.buttons .passive:hover
+{
+ background:#e7e7e7;
+}
+.buttons .active:hover
+{
+ background:#fff;
+}
+.meta-view
+{
+width:300px;
+overflow:auto;
+line-height: 100%;
+float:right;
+background:rgba(255,255,255,0.7);
+box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.08);
+white-space:nowrap;
+display:block;
+position:absolute;
+right:10px;
+top:10px;
+}
+.tree-view, .no-select
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.tree-view
+{
+overflow:hidden;
+line-height: 100%;
+white-space:nowrap;
+overflow-x:hidden;
+color:black;
+}
+.tree-view .group{}
+.tree-view .group-c{}
+.tree-view .items{margin-left:12px;}
+.tree-view .group-c .items{margin-left:12px;display:none;}
+.meta-view .open,.meta-view .close,.tree-view .icon, .tree-view .open, .tree-view .node, .tree-view .vis, .tree-view  .hdn{
+ background-image:url('treeicons.png');
+ height:16px;
+ width:16px;
+}
+.close,.tree-view .icon, .tree-view .open, .tree-view .node, .tree-view .vis, .tree-view  .hdn{
+ display:block;
+ float:left;
+ margin-top:1px;
+ margin-left:4px;
+}
+.tree-view .open , .tree-view .vis, .tree-view  .hdn{
+    margin-left:0px;
+}
+.tree-view .icon{background-position:-128px,0px;}
+.tree-view .open{background-position:-16px,0px;}
+.tree-view .open:hover{background-position:-48px,0px;}
+.tree-view .node{background-position:-160px,0px;}
+.tree-view .vis{background-position:-80px,0px;}
+.tree-view .hdn{background-position:-64px,0px;}
+.tree-view .group-c .open{background-position:0px,0px;}
+.tree-view .group-c .open:hover{background-position:-32px,0px;}
+.tree-view .item,.tree-view .gitem
+{
+ display:block;
+ cursor:pointer;
+ height:18px;
+}
+.tree-view .normal,.tree-view .selected
+{
+ display:inline-block;
+ cursor:pointer;
+ height:18px;
+}
+.tree-view .normal:hover{
+    background-color:#E5F3FB;
+}
+.tree-view .selected
+{
+    background-color:#007ACC;
+}
+.tree-view .item{
+ margin-left:16px;
+}
+.tree-view .label, .tree-view .labelSerch{
+ height: 18px;
+ padding:0px;
+ padding-left:4px;
+ padding-right:8px;
+ display:inline-block;
+ font-family:"Segoe UI",Tahoma, Arial, Helvetica, sans-serif;
+ font-size:12.73px;
+ line-height:126%;
+}
+.tree-view .item:hover .label,.tree-view .gitem:hover .label{
+ background-color:#E5F3FB;
+}
+.tree-view .selected .label, .tree-view .selected,  .tree-view .selected:hover .label{
+ background-color:#007ACC !important;
+ color:white;
+}
+.tree-view .labelSerch{
+ background-color:#C27D1A !important;
+}.meta-view
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+overflow:auto;
+line-height: 100%;
+white-space:nowrap;
+}
+.meta-view td{
+ height: 18px;
+ font-family:"Segoe UI",Tahoma, Arial, Helvetica, sans-serif;
+ font-size:12px;
+ line-height:126%;
+}
+.meta-view .row {
+    cursor:pointer;
+}
+.meta-view .row:hover{
+ background-color:#E5F3FB;
+}
+.meta-view .dummy ,.meta-view .open, .meta-view .close{
+    width:16px;
+    display:block;
+}
+.meta-view .open {background-position:-16px,0px;}
+.meta-view .close {background-position:0px,0px;}
+.meta-view .open:hover{background-position:-48px,0px;}
+.meta-view .close:hover{background-position:-32px,0px;}
+.meta-view .name {
+    max-width:120px;
+}
+.meta-view .nameS {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:120px;
+    display:block;
+}
